@@ -426,12 +426,12 @@ struct LOG_FILE
 
 // Global server flags
 #define	NUM_GLOBAL_SERVER_FLAGS			128
-#define	GSF_DISABLE_PUSH_ROUTE			1
-#define	GSF_DISABLE_RADIUS_AUTH			2
-#define	GSF_DISABLE_CERT_AUTH			3
-#define	GSF_DISABLE_DEEP_LOGGING		4
-#define	GSF_DISABLE_AC					5
-#define	GSF_DISABLE_SYSLOG				6
+//#define	GSF_DISABLE_PUSH_ROUTE			1
+//#define	GSF_DISABLE_RADIUS_AUTH			2
+//#define	GSF_DISABLE_CERT_AUTH			3
+//#define	GSF_DISABLE_DEEP_LOGGING		4
+//#define	GSF_DISABLE_AC					5
+//#define	GSF_DISABLE_SYSLOG				6
 #define	GSF_SHOW_OSS_MSG				7
 #define	GSF_LOCALBRIDGE_NO_DISABLE_OFFLOAD	8
 #define	GSF_DISABLE_SESSION_RECONNECT	9
@@ -713,7 +713,7 @@ void DestroyServerCapsCache(SERVER *s);
 
 void SetGlobalServerFlag(UINT index, UINT value);
 UINT GetGlobalServerFlag(UINT index);
-void UpdateGlobalServerFlags(SERVER *s, CAPSLIST *t);
+//void UpdateGlobalServerFlags(SERVER *s, CAPSLIST *t);
 
 
 bool IsAdminPackSupportedServerProduct(char *name);
@@ -741,10 +741,10 @@ void SiApplyAzureConfig(SERVER *s, DDNS_CLIENT_STATUS *ddns_status);
 void SiSetAzureEnable(SERVER *s, bool enabled);
 bool SiGetAzureEnable(SERVER *s);
 
-void SiUpdateCurrentRegion(CEDAR *c, char *region, bool force_update);
-void SiGetCurrentRegion(CEDAR *c, char *region, UINT region_size);
-bool SiIsEnterpriseFunctionsRestrictedOnOpenSource(CEDAR *c);
-bool SiCheckCurrentRegion(CEDAR *c, char *r);
+//void SiUpdateCurrentRegion(CEDAR *c, char *region, bool force_update);
+//void SiGetCurrentRegion(CEDAR *c, char *region, UINT region_size);
+//bool SiIsEnterpriseFunctionsRestrictedOnOpenSource(CEDAR *c);
+//bool SiCheckCurrentRegion(CEDAR *c, char *r);
 
 #endif	// SERVER_H
 
